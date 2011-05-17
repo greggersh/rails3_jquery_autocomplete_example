@@ -1,0 +1,9 @@
+%p
+  Autocomplete with jQuery-ui with form
+  = form_for @movie do |f|
+    = f.autocomplete_field :title, home_autocomplete_movie_title_path
+    
+%p
+  Autocomplete with jQuery-ui, no form
+  %br
+  = autocomplete_field_tag 'title', '', home_autocomplete_movie_title_path
